@@ -1,6 +1,6 @@
-# Coffree
+# Sip Club
 
-Coffree is a validation website for a Vienna independent drink club. The first
+Sip Club is a validation website for a Vienna independent drink club. The first
 offer is intentionally simple: founding members pay a small monthly fee and get
 20% off one eligible drink per visit at selected partner cafes.
 

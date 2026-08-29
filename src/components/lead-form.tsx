@@ -19,7 +19,7 @@ const copy = {
   },
   cafe: {
     title: "Cafe list",
-    intro: "Test Coffree with selected drinks.",
+    intro: "Test Sip Club with selected drinks.",
     button: "Join cafe list",
     success: "Cafe interest saved. Nice.",
   },

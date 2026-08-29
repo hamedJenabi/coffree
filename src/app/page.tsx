@@ -17,10 +17,50 @@ const savings = [
 ];
 
 const cafeBenefits = [
-  "More repeat local visits.",
-  "You choose the drinks.",
-  "No hardware for the pilot.",
+  {
+    icon: "repeat",
+    text: "More repeat local visits.",
+  },
+  {
+    icon: "drink",
+    text: "You choose the drinks.",
+  },
+  {
+    icon: "phone",
+    text: "No hardware for the pilot.",
+  },
 ];
+
+function BenefitIcon({ icon }: { icon: string }) {
+  if (icon === "repeat") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7 7h8a4 4 0 0 1 4 4v1" />
+        <path d="m16 4 3 3-3 3" />
+        <path d="M17 17H9a4 4 0 0 1-4-4v-1" />
+        <path d="m8 20-3-3 3-3" />
+      </svg>
+    );
+  }
+
+  if (icon === "drink") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7 3h10l-1 17H8L7 3Z" />
+        <path d="M8 8h8" />
+        <path d="M10 3 9 1" />
+        <path d="M14 3l1-2" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="7" y="2" width="10" height="20" rx="2" />
+      <path d="M10 18h4" />
+    </svg>
+  );
+}
 
 const qrCells = Array.from({ length: 81 }, (_, index) => {
   const row = Math.floor(index / 9);
@@ -37,9 +77,9 @@ export default function Home() {
   return (
     <main className={styles.page}>
       <header className={styles.header}>
-        <a className={styles.brand} href="#top" aria-label="Coffree home">
-          <span className={styles.brandMark}>Cf</span>
-          <span>Coffree</span>
+        <a className={styles.brand} href="#top" aria-label="Sip Club home">
+          <span className={styles.brandMark}>Sc</span>
+          <span>Sip Club</span>
         </a>
         <nav className={styles.nav} aria-label="Main navigation">
           <a href="#save">Save</a>
@@ -51,7 +91,7 @@ export default function Home() {
       <section className={styles.hero} id="top">
         <div className={styles.heroCopy}>
           <span className={styles.eyebrow}>Vienna pilot</span>
-          <h1>Coffree</h1>
+          <h1>Sip Club</h1>
           <p>
             A simple drink club for coffee, matcha, tea, and independent cafes.
           </p>
@@ -105,7 +145,7 @@ export default function Home() {
             <p>One pass for coffee, matcha, tea, and iced drinks.</p>
           </div>
 
-          <div className={styles.saveVisual} aria-label="Coffree app preview">
+          <div className={styles.saveVisual} aria-label="Sip Club app preview">
             <div className={`${styles.phone} ${styles.qrPhone}`}>
               <div className={styles.qrHeader}>
                 <strong>Order code</strong>
@@ -146,9 +186,11 @@ export default function Home() {
             <h2>Bring regulars back.</h2>
             <div className={styles.benefitList}>
               {cafeBenefits.map((benefit) => (
-                <div className={styles.benefit} key={benefit}>
-                  <span>OK</span>
-                  <p>{benefit}</p>
+                <div className={styles.benefit} key={benefit.text}>
+                  <span className={styles.benefitIcon}>
+                    <BenefitIcon icon={benefit.icon} />
+                  </span>
+                  <p>{benefit.text}</p>
                 </div>
               ))}
             </div>
@@ -169,9 +211,9 @@ export default function Home() {
       </section>
 
       <footer className={styles.footer}>
-        <a className={styles.brand} href="#top" aria-label="Coffree home">
-          <span className={styles.brandMark}>Cf</span>
-          <span>Coffree</span>
+        <a className={styles.brand} href="#top" aria-label="Sip Club home">
+          <span className={styles.brandMark}>Sc</span>
+          <span>Sip Club</span>
         </a>
         <p>Vienna founding pilot.</p>
       </footer>

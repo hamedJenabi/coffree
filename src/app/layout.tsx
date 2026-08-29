@@ -6,11 +6,11 @@ import "@fontsource/aleo/latin-800.css";
 import "./globals.scss";
 
 export const metadata: Metadata = {
-  title: "Coffree | Vienna's independent drink club",
+  title: "Sip Club | Vienna's independent drink club",
   description:
-    "Join the founding list for Coffree, a Vienna drink club for coffee, matcha, tea, and selected cafe drinks.",
+    "Join the founding list for Sip Club, a Vienna drink club for coffee, matcha, tea, and selected cafe drinks.",
   openGraph: {
-    title: "Coffree | Vienna's independent drink club",
+    title: "Sip Club | Vienna's independent drink club",
     description:
       "A founding membership for 20% off coffee, matcha, tea, and selected drinks at independent Vienna cafes.",
     type: "website",
