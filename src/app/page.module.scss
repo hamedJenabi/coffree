@@ -19,9 +19,11 @@
 
 .brand {
   display: inline-flex;
+  flex: 0 0 auto;
   align-items: center;
   gap: 0.7rem;
   font-weight: 850;
+  white-space: nowrap;
 }
 
 .brandMark {
@@ -73,10 +75,6 @@
 
   h1 {
     margin: 0.5rem 0 1rem;
-    font-family: var(--font-display);
-    font-size: clamp(4.8rem, 13vw, 10rem);
-    font-weight: 700;
-    line-height: 0.84;
   }
 
   p {
@@ -86,6 +84,34 @@
     font-size: clamp(1.18rem, 2vw, 1.55rem);
     line-height: 1.45;
   }
+}
+
+.heroTitle {
+  display: block;
+  color: var(--espresso);
+}
+
+.heroTitleDesktop {
+  display: grid;
+  gap: 0;
+
+  span {
+    display: block;
+    font-family: var(--font-display);
+    font-size: clamp(5.5rem, 9.5vw, 9rem);
+    font-weight: 700;
+    line-height: 0.84;
+    white-space: nowrap;
+  }
+}
+
+.heroTitleMobile {
+  display: none;
+  font-family: var(--font-display);
+  font-size: clamp(3.05rem, 15vw, 4.75rem);
+  font-weight: 700;
+  line-height: 0.9;
+  white-space: nowrap;
 }
 
 .eyebrow {
@@ -328,6 +354,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 1rem;
   padding: 0.75rem;
   border: 1px solid rgba(47, 30, 23, 0.1);
@@ -346,30 +373,27 @@
 }
 
 .savingPill {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  display: grid;
+  gap: 0.35rem;
   width: 100%;
-  min-height: 66px;
-  padding: 0.85rem 1rem;
+  min-height: 78px;
+  padding: 0.95rem 1rem;
   border: 1px solid rgba(47, 30, 23, 0.12);
-  border-radius: 999px;
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.72);
   box-shadow: 0 10px 24px rgba(47, 30, 23, 0.08);
 
   strong {
     color: #4a1714;
-    font-size: clamp(0.98rem, 1.8vw, 1.34rem);
-    line-height: 1.1;
-    white-space: nowrap;
+    font-size: clamp(1.08rem, 1.65vw, 1.42rem);
+    line-height: 1.15;
   }
 
   span {
-    flex: 0 0 auto;
     color: var(--muted);
     font-size: 0.82rem;
     font-weight: 900;
+    line-height: 1.1;
     text-transform: uppercase;
   }
 }
@@ -681,6 +705,14 @@
     min-height: 420px;
   }
 
+  .heroTitleDesktop {
+    display: none;
+  }
+
+  .heroTitleMobile {
+    display: block;
+  }
+
   .proofRail,
   .formsGrid,
   .leadForm,
@@ -692,10 +724,6 @@
   .qrPhone {
     justify-self: stretch;
     width: 100%;
-  }
-
-  .savingPill {
-    border-radius: 8px;
   }
 
   .heroActions {

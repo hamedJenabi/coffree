@@ -1,8 +1,8 @@
-# Sip Club
+# MokkaClub
 
-Sip Club is a validation website for a Vienna independent drink club. The first
-offer is intentionally simple: founding members pay a small monthly fee and get
-20% off one eligible drink per visit at selected partner cafes.
+MokkaClub is a validation website for a Vienna cafe membership. The first offer
+is intentionally simple: founding members pay a small monthly fee and unlock
+cafe-controlled member offers at selected independent cafes.
 
 ## Getting Started
 
@@ -22,7 +22,9 @@ stored locally in `data/leads.jsonl`, which is ignored by Git.
 ## Scope
 
 This first chunk is a promotion site and demand test. It does not include app
-accounts, QR redemption, payments, map integrations, or a production backend.
+accounts, real QR redemption, payments, map integrations, or a production
+backend. The current business goal is to validate 10 cafe commitments,
+50-100 paying members, repeat usage, and cafe willingness to continue.
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.

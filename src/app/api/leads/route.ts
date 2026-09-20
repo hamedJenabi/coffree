@@ -46,7 +46,7 @@ export async function POST(request: Request) {
   }
 
   if (kind === "cafe" && (!cafeName || !eligibleDrinks)) {
-    return invalid("Cafe name and eligible drinks are required.");
+    return invalid("Cafe name and offer idea are required.");
   }
 
   const record = {
