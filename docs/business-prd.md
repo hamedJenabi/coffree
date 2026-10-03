@@ -1,5 +1,9 @@
 # Sip Club Business PRD
 
+> Historical business plan. The [MokkaClub handoff](mokkaclub-prd.md) supersedes
+> the brand, pilot duration, and validation targets in this document. See the
+> [current launch plan](mokkaclub-launch-plan.md) for next steps.
+
 ## Problem Statement
 
 Sip Club needs to prove that a Vienna drink membership can work before investing

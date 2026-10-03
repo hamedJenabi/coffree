@@ -1,5 +1,10 @@
 # Sip Club Launch Site PRD
 
+> Historical landing-page requirements and implementation notes. The
+> [MokkaClub handoff](mokkaclub-prd.md) is the current business reference; the
+> website still implements this earlier Sip Club direction. See the
+> [current launch plan](mokkaclub-launch-plan.md) for the gaps and next steps.
+
 ## Problem Statement
 
 The product idea is promising but still unproven: a Vienna drink membership

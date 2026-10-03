@@ -4,6 +4,20 @@ Sip Club is a validation website for a Vienna independent drink club. The first
 offer is intentionally simple: founding members pay a small monthly fee and get
 20% off one eligible drink per visit at selected partner cafes.
 
+## Product documents
+
+The current working brand and business direction are **MokkaClub**. The existing
+website still uses Sip Club and the earlier pilot targets.
+
+- [MokkaClub PRD](docs/mokkaclub-prd.md): the complete handoff, preserved as
+  supplied. This is the current business reference.
+- [MokkaClub launch plan](docs/mokkaclub-launch-plan.md): repository gaps,
+  priorities, and the first 30 days of validation.
+- [Earlier business PRD](docs/business-prd.md) and
+  [earlier landing-page PRD](docs/prd.md): historical Sip Club requirements and
+  implementation notes. Their conflicting business decisions are superseded
+  by the MokkaClub handoff.
+
 ## Getting Started
 
 Use Node.js 20.9 or newer, then run:
