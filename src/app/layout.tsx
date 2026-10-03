@@ -6,13 +6,13 @@ import "@fontsource/aleo/latin-800.css";
 import "./globals.scss";
 
 export const metadata: Metadata = {
-  title: "Sip Club | Vienna's independent drink club",
+  title: "MokkaClub | Vienna's cafe membership",
   description:
-    "Join the founding list for Sip Club, a Vienna drink club for coffee, matcha, tea, and selected cafe drinks.",
+    "Join the founding list for MokkaClub, a Vienna cafe membership for coffee, matcha, tea, and selected member offers.",
   openGraph: {
-    title: "Sip Club | Vienna's independent drink club",
+    title: "MokkaClub | Vienna's cafe membership",
     description:
-      "A founding membership for 20% off coffee, matcha, tea, and selected drinks at independent Vienna cafes.",
+      "A founding membership for coffee, matcha, tea, and cafe-controlled offers at independent Vienna cafes.",
     type: "website",
   },
 };

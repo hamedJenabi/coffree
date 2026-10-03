@@ -13,15 +13,15 @@ type LeadFormProps = {
 const copy = {
   member: {
     title: "Member list",
-    intro: "Get first access to founding pricing.",
+    intro: "Get first access to the Vienna founding membership.",
     button: "Join member list",
-    success: "You are on the founding member list.",
+    success: "You are on the MokkaClub founding member list.",
   },
   cafe: {
-    title: "Cafe list",
-    intro: "Test Sip Club with selected drinks.",
-    button: "Join cafe list",
-    success: "Cafe interest saved. Nice.",
+    title: "Cafe pilot",
+    intro: "Test a cafe-controlled member offer with no POS integration.",
+    button: "Join cafe pilot",
+    success: "MokkaClub cafe pilot interest saved.",
   },
 };
 
@@ -78,7 +78,12 @@ export default function LeadForm({ kind }: LeadFormProps) {
       {isCafe ? (
         <label className={styles.formField}>
           Cafe name
-          <input name="cafeName" type="text" autoComplete="organization" required />
+          <input
+            name="cafeName"
+            type="text"
+            autoComplete="organization"
+            required
+          />
         </label>
       ) : null}
 
@@ -92,17 +97,17 @@ export default function LeadForm({ kind }: LeadFormProps) {
         <input
           name="area"
           type="text"
-          placeholder="Example: near Karlsplatz"
+          placeholder="Example: Neubau"
           required
         />
       </label>
 
       {isCafe ? (
         <label className={styles.formFieldWide}>
-          Eligible drinks
+          Offer idea
           <textarea
             name="eligibleDrinks"
-            placeholder="Example: espresso, cappuccino, iced tea"
+            placeholder="Example: matcha weekdays 14:00-17:00"
             required
           />
         </label>

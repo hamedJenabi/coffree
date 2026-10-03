@@ -4,30 +4,30 @@ import styles from "./page.module.scss";
 
 const proofPoints = [
   { value: "EUR 4.99", label: "Founding month" },
-  { value: "20%", label: "Off drinks" },
-  { value: "5 cafes", label: "Pilot target" },
+  { value: "10 cafes", label: "Commitment goal" },
+  { value: "50-100", label: "Paying member goal" },
 ];
 
 const drinks = ["Coffee", "Matcha", "Tea", "Iced drinks"];
 
-const savings = [
-  { value: "EUR 16.50", month: "August" },
-  { value: "EUR 17.80", month: "July" },
-  { value: "EUR 15.50", month: "June" },
+const memberMoments = [
+  { value: "EUR 4.99 / month", label: "Founding membership" },
+  { value: "Offers by product and hour", label: "Cafe-controlled" },
+  { value: "Independent Vienna cafes", label: "Neighborhood first" },
 ];
 
 const cafeBenefits = [
   {
     icon: "repeat",
-    text: "More repeat local visits.",
+    text: "Incremental visits from nearby members.",
   },
   {
     icon: "drink",
-    text: "You choose the drinks.",
+    text: "You choose products, days, and hours.",
   },
   {
     icon: "phone",
-    text: "No hardware for the pilot.",
+    text: "No POS integration for the pilot.",
   },
 ];
 
@@ -77,9 +77,9 @@ export default function Home() {
   return (
     <main className={styles.page}>
       <header className={styles.header}>
-        <a className={styles.brand} href="#top" aria-label="Sip Club home">
-          <span className={styles.brandMark}>Sc</span>
-          <span>Sip Club</span>
+        <a className={styles.brand} href="#top" aria-label="MokkaClub home">
+          <span className={styles.brandMark}>MC</span>
+          <span>MokkaClub</span>
         </a>
         <nav className={styles.nav} aria-label="Main navigation">
           <a href="#save">Save</a>
@@ -91,16 +91,25 @@ export default function Home() {
       <section className={styles.hero} id="top">
         <div className={styles.heroCopy}>
           <span className={styles.eyebrow}>Vienna pilot</span>
-          <h1>Sip Club</h1>
+          <h1 className={styles.heroTitle} aria-label="MokkaClub">
+            <span className={styles.heroTitleDesktop} aria-hidden="true">
+              <span>Mokka</span>
+              <span>Club</span>
+            </span>
+            <span className={styles.heroTitleMobile} aria-hidden="true">
+              mokkaClub
+            </span>
+          </h1>
           <p>
-            A simple drink club for coffee, matcha, tea, and independent cafes.
+            One membership for coffee, matcha, tea, and member offers at
+            independent Vienna cafes.
           </p>
           <div className={styles.heroActions}>
             <a className={styles.primaryButton} href="#join">
-              Join the list
+              Join founding list
             </a>
             <a className={styles.secondaryButton} href="#cafes">
-              Partner cafe
+              Pilot with us
             </a>
           </div>
         </div>
@@ -116,7 +125,7 @@ export default function Home() {
             className={styles.heroImage}
           />
           <div className={styles.passCard}>
-            <span>Founding pass</span>
+            <span>Founding offer</span>
             <strong>20% off</strong>
           </div>
         </div>
@@ -140,15 +149,18 @@ export default function Home() {
       <section className={styles.saveSection} id="save">
         <div className={styles.saveInner}>
           <div className={styles.saveCopy}>
-            <span className={styles.sectionKicker}>01. Save</span>
-            <h2>Show code. Save every visit.</h2>
-            <p>One pass for coffee, matcha, tea, and iced drinks.</p>
+            <span className={styles.sectionKicker}>01. Member pass</span>
+            <h2>Show your code. Unlock the offer.</h2>
+            <p>
+              Start simple: a mobile member credential, participating cafes,
+              and selected offers that can prove real demand.
+            </p>
           </div>
 
-          <div className={styles.saveVisual} aria-label="Sip Club app preview">
+          <div className={styles.saveVisual} aria-label="MokkaClub app preview">
             <div className={`${styles.phone} ${styles.qrPhone}`}>
               <div className={styles.qrHeader}>
-                <strong>Order code</strong>
+                <strong>MokkaClub code</strong>
                 <span>Show at the counter</span>
               </div>
               <div className={styles.qrCode} aria-hidden="true">
@@ -160,16 +172,16 @@ export default function Home() {
                 ))}
               </div>
               <div className={styles.qrSummary}>
-                <span>Today</span>
-                <strong>EUR 0.78 saved</strong>
+                <span>Neubau pilot</span>
+                <strong>Member offer active</strong>
               </div>
             </div>
 
             <div className={styles.savingStack}>
-              {savings.map((saving) => (
-                <div className={styles.savingPill} key={saving.month}>
-                  <strong>You saved {saving.value}</strong>
-                  <span>{saving.month}</span>
+              {memberMoments.map((moment) => (
+                <div className={styles.savingPill} key={moment.label}>
+                  <span>{moment.label}</span>
+                  <strong>{moment.value}</strong>
                 </div>
               ))}
             </div>
@@ -183,7 +195,7 @@ export default function Home() {
             <span>For cafes</span>
           </div>
           <div className={styles.cafeContent}>
-            <h2>Bring regulars back.</h2>
+            <h2>Bring new locals in.</h2>
             <div className={styles.benefitList}>
               {cafeBenefits.map((benefit) => (
                 <div className={styles.benefit} key={benefit.text}>
@@ -200,9 +212,12 @@ export default function Home() {
 
       <section className={styles.formsSection} id="join">
         <div className={styles.formsIntro}>
-          <span className={styles.eyebrow}>Founding list</span>
-          <h2>Test demand first.</h2>
-          <p>Two lists: future members and partner cafes.</p>
+          <span className={styles.eyebrow}>30-day validation</span>
+          <h2>Help decide if MokkaClub should exist.</h2>
+          <p>
+            Join as a future member or register cafe pilot interest before the
+            product is overbuilt.
+          </p>
         </div>
         <div className={styles.formsGrid}>
           <LeadForm kind="member" />
@@ -211,11 +226,11 @@ export default function Home() {
       </section>
 
       <footer className={styles.footer}>
-        <a className={styles.brand} href="#top" aria-label="Sip Club home">
-          <span className={styles.brandMark}>Sc</span>
-          <span>Sip Club</span>
+        <a className={styles.brand} href="#top" aria-label="MokkaClub home">
+          <span className={styles.brandMark}>MC</span>
+          <span>MokkaClub</span>
         </a>
-        <p>Vienna founding pilot.</p>
+        <p>Vienna founding pilot. Name pending legal clearance.</p>
       </footer>
     </main>
   );
